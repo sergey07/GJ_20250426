@@ -4,6 +4,7 @@ public class LevelToggler : MonoBehaviour
 {
     public static LevelToggler Instance { get; private set; }
 
+    [SerializeField] private Transform _requiredPartTransform;
     [SerializeField] private GameObject[] _levels;
 
     private int _curLevel = 0;
@@ -21,18 +22,13 @@ public class LevelToggler : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        
-    }
-
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.N))
         {
             if (IsLastLevel())
             {
-                FirstLevel();
+                GameManager.Instance.ShowFinishGamePanel();
             }
             else
             {
@@ -58,8 +54,15 @@ public class LevelToggler : MonoBehaviour
         return _curLevel == _levels.Length - 1;
     }
 
+    public void RestartLevel()
+    {
+        UpdateLevel(_curLevel);
+    }
+
     private void UpdateLevel(int curLevel)
     {
+        _requiredPartTransform.position = new Vector3(0, 60, -3);
+
         for (int i = 0; i < _levels.Length; i++)
         {
             if (i == curLevel)

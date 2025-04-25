@@ -48,4 +48,22 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1.0f;
     }
+
+    public void ShowFinishLevelPanel()
+    {
+        Pause();
+        _panelFinishGame.gameObject.SetActive(true);
+    }
+
+    public void ShowGameOverPanel()
+    {
+        Pause();
+        _panelGameOver.gameObject.SetActive(true);
+    }
+
+    public void ShowFinishGamePanel()
+    {
+        Pause();
+        _panelFinishGame.gameObject.SetActive(true);
+    }
 }
