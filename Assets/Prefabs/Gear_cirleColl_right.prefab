@@ -269,6 +269,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gear_low_v2
       objectReference: {fileID: 0}
+    - target: {fileID: 5030713898092955540, guid: c1d98d90f495ba94b98f35430103788e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030713898092955540, guid: c1d98d90f495ba94b98f35430103788e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5030713898092955540, guid: c1d98d90f495ba94b98f35430103788e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6693380843492801570, guid: c1d98d90f495ba94b98f35430103788e,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
