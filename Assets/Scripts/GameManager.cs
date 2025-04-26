@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject _panelGameOver;
     [SerializeField] private GameObject _panelFinishGame;
 
+    private bool _isPaused;
+
     private void Awake()
     {
         if (Instance == null)
@@ -41,14 +43,21 @@ public class GameManager : MonoBehaviour
 
     public void Pause()
     {
+        _isPaused = true;
         Camera.main.GetComponent<AudioSource>().enabled = false;
         Time.timeScale = 0.0f;
     }
 
     public void Resume()
     {
+        _isPaused = false;
         Camera.main.GetComponent<AudioSource>().enabled = true;
         Time.timeScale = 1.0f;
+    }
+
+    public bool IsPaused()
+    {
+        return _isPaused;
     }
 
     public void ShowFinishLevelPanel()

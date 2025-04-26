@@ -9,6 +9,7 @@ public class Target : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            //GameManager.Instance.Pause();
             other.gameObject.GetComponent<Rigidbody>().isKinematic = true;
             StartCoroutine(ShowPanel());
         }

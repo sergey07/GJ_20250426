@@ -1662,6 +1662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 50
+  _requiredPart: {fileID: 1921784341639979804}
 --- !u!1001 &312335905
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2265,6 +2266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 50
+  _requiredPart: {fileID: 1921784341639979804}
 --- !u!1 &423142993
 GameObject:
   m_ObjectHideFlags: 0
@@ -4316,6 +4318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 50
+  _requiredPart: {fileID: 1921784341639979804}
 --- !u!1001 &1029396364
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6501,6 +6504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 50
+  _requiredPart: {fileID: 1921784341639979804}
 --- !u!1001 &1406933140
 PrefabInstance:
   m_ObjectHideFlags: 0
