@@ -7,7 +7,14 @@ public class Target : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             other.gameObject.GetComponent<Rigidbody>().isKinematic = true;
-            GameManager.Instance.ShowFinishLevelPanel();
+            if (LevelToggler.Instance.IsLastLevel())
+            {
+                GameManager.Instance.ShowFinishGamePanel();
+            }
+            else
+            {
+                GameManager.Instance.ShowFinishLevelPanel();
+            }
         }
     }
 }
