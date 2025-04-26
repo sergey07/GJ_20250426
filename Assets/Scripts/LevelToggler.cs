@@ -68,7 +68,7 @@ public class LevelToggler : MonoBehaviour
         _requiredPart.GetComponent<Rigidbody>().isKinematic = true;
         _requiredPart.GetComponent<Rigidbody>().isKinematic = false;
 
-        _requiredPart.transform.position = new Vector3(0, 60, -9.5f);
+        _requiredPart.transform.position = new Vector3(0, 60, -1.5f);
 
         for (int i = 0; i < _levels.Length; i++)
         {
