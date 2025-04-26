@@ -38,6 +38,7 @@ public class LevelToggler : MonoBehaviour
 
     public void NextLevel()
     {
+        Debug.Log("NextLevel");
         if (IsLastLevel())
         {
             GameManager.Instance.ShowFinishGamePanel();
@@ -51,6 +52,8 @@ public class LevelToggler : MonoBehaviour
 
     public bool IsLastLevel()
     {
+        Debug.Log("IsLastLevel");
+        Debug.Log(_curLevel == _levels.Length - 1);
         return _curLevel == _levels.Length - 1;
     }
 

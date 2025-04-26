@@ -55,6 +55,11 @@ public class GameManager : MonoBehaviour
         _panelFinishLevel.gameObject.SetActive(true);
     }
 
+    public void HideFinishLevelPanel()
+    {
+        _panelFinishLevel.gameObject.SetActive(false);
+    }
+
     public void ShowGameOverPanel()
     {
         Pause();
