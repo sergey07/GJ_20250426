@@ -1816,6 +1816,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gear_cirleColl_right (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 6417864471546232608, guid: 83c2f0ab9faa82f43aebbc63f55f3568,
+        type: 3}
+      propertyPath: m_Height
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6417864471546232608, guid: 83c2f0ab9faa82f43aebbc63f55f3568,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3777,7 +3787,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &696137402
 Transform:
   m_ObjectHideFlags: 0
@@ -6464,11 +6474,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4357959608795298920, guid: 01739ddf967104c4eaeeaf83f5082c16,
-        type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5381296212452854177, guid: 01739ddf967104c4eaeeaf83f5082c16,
         type: 3}
