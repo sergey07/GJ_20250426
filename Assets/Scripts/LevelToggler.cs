@@ -5,6 +5,7 @@ public class LevelToggler : MonoBehaviour
     public static LevelToggler Instance { get; private set; }
 
     [SerializeField] private GameObject _requiredPart;
+    //[SerializeField] private GameObject _clock;
     [SerializeField] private GameObject[] _levels;
 
     private int _curLevel = 0;
@@ -66,6 +67,8 @@ public class LevelToggler : MonoBehaviour
         _requiredPart.GetComponent<Rigidbody>().isKinematic = false;
 
         _requiredPart.transform.position = new Vector3(0, 60, -1.5f);
+
+        //_clock.transform.rotation = Quaternion.Euler(-90, 0, 0);
 
         for (int i = 0; i < _levels.Length; i++)
         {
