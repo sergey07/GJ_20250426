@@ -4,6 +4,7 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance { get; private set; }
 
+    [SerializeField] private AudioClip _audioClip_PushButton;
     [SerializeField] private AudioClip _audioClip_FinishLevel;
     [SerializeField] private AudioClip _audioClip_GameOver;
 
@@ -20,6 +21,11 @@ public class SoundManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public void PlayPushButton()
+    {
+        _audioSource.PlayOneShot(_audioClip_PushButton);
     }
 
     public void PlayFinishLevel()
