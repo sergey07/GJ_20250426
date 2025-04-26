@@ -26,14 +26,7 @@ public class LevelToggler : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.N))
         {
-            if (IsLastLevel())
-            {
-                GameManager.Instance.ShowFinishGamePanel();
-            }
-            else
-            {
-                NextLevel();
-            }
+            NextLevel();
         }
     }
 
@@ -45,8 +38,15 @@ public class LevelToggler : MonoBehaviour
 
     public void NextLevel()
     {
-        _curLevel++;
-        UpdateLevel(_curLevel);
+        if (IsLastLevel())
+        {
+            GameManager.Instance.ShowFinishGamePanel();
+        }
+        else
+        {
+            _curLevel++;
+            UpdateLevel(_curLevel);
+        }
     }
 
     public bool IsLastLevel()
@@ -61,6 +61,10 @@ public class LevelToggler : MonoBehaviour
 
     private void UpdateLevel(int curLevel)
     {
+        // Reset phisic
+        _requiredPart.GetComponent<Rigidbody>().isKinematic = true;
+        _requiredPart.GetComponent<Rigidbody>().isKinematic = false;
+
         _requiredPart.transform.position = new Vector3(0, 60, -3);
 
         for (int i = 0; i < _levels.Length; i++)

@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
     public void ShowFinishLevelPanel()
     {
         Pause();
-        _panelFinishGame.gameObject.SetActive(true);
+        _panelFinishLevel.gameObject.SetActive(true);
     }
 
     public void ShowGameOverPanel()
