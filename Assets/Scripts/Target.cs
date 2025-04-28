@@ -9,8 +9,14 @@ public class Target : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            //GameManager.Instance.Pause();
             other.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+            GameObject[] gears = GameObject.FindGameObjectsWithTag("Gear");
+
+            foreach (GameObject gear in gears)
+            {
+                gear.GetComponent<RotateGear>().StartRotate();
+            }
+
             StartCoroutine(ShowPanel());
         }
     }
