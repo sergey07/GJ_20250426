@@ -10,11 +10,19 @@ public class Target : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             other.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+
             GameObject[] gears = GameObject.FindGameObjectsWithTag("Gear");
 
             foreach (GameObject gear in gears)
             {
                 gear.GetComponent<RotateGear>().StartRotate();
+            }
+
+            GameObject[] clockHands = GameObject.FindGameObjectsWithTag("ClockHand");
+
+            foreach (GameObject clockHand in clockHands)
+            {
+                clockHand.GetComponent<RotateClockHand>().StartRotate();
             }
 
             StartCoroutine(ShowPanel());

@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Gear
+  - ClockHand
   layers:
   - Default
   - TransparentFX

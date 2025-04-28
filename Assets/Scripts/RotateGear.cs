@@ -6,9 +6,9 @@ public enum GearType { Left, Right  }
 public class RotateGear : MonoBehaviour
 {
     [SerializeField] private GearType _gearType;
+    [SerializeField] private float _speed = 180.0f;
 
     private bool _isRotated = false;
-    private float _speed = 180.0f;
 
     public void StartRotate()
     {
