@@ -25,6 +25,10 @@ public class Target : MonoBehaviour
                 clockHand.GetComponent<RotateClockHand>().StartRotate();
             }
 
+            Camera.main.GetComponent<AudioSource>().enabled = false;
+
+            SoundManager.Instance.PlayFinishLevel();
+
             StartCoroutine(ShowPanel());
         }
     }

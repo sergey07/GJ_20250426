@@ -9,6 +9,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioClip _audioClip_GameOver;
 
     private AudioSource _audioSource;
+
     private void Awake()
     {
         if (Instance == null)
