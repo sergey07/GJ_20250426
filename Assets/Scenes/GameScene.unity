@@ -1379,6 +1379,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GearRight
       objectReference: {fileID: 0}
+    - target: {fileID: 7982773486665347436, guid: 83c2f0ab9faa82f43aebbc63f55f3568,
+        type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
