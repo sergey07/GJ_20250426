@@ -4,6 +4,22 @@ using UnityEngine;
 public class Target : MonoBehaviour
 {
     [SerializeField] private float _pauseBeforeNextLevel = 5.0f;
+    
+    private GameObject _player;
+    private bool _isPlayerMoveToTargetCenter = false;
+
+    private void Start()
+    {
+        _player = GameObject.FindGameObjectWithTag("Player");
+    }
+
+    private void FixedUpdate()
+    {
+        if (_isPlayerMoveToTargetCenter)
+        {
+            _player.gameObject.transform.position = Vector3.MoveTowards(_player.gameObject.transform.position, transform.position, 0.1f);
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -28,6 +44,8 @@ public class Target : MonoBehaviour
             Camera.main.GetComponent<AudioSource>().enabled = false;
 
             SoundManager.Instance.PlayFinishLevel();
+
+            _isPlayerMoveToTargetCenter = true;
 
             StartCoroutine(ShowPanel());
         }
